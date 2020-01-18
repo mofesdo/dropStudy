@@ -56,28 +56,17 @@
       crossorigin="anonymous"
     />
     <div class="container">
-      <form class="form-signin" role="form">
-        <h2 class="form-signin-heading">Please log in</h2>
-        <input
-          type="email"
-          class="form-control"
-          placeholder="Email address"
-          required
-          autofocus
-        />
-        <input
-          type="password"
-          class="form-control"
-          placeholder="Password"
-          required
-        />
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me" /> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">
-          Log In
+      <form action="/action_page.php" target="_blank">
+      <h2 class="form-signin-heading">Please enter the following information.</h2>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="First Name" required name="First Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Last Name" required name="Last Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="University/College" required name="University/College"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Class Year (1st, 2nd, 3rd, 4th, etc)" required name="Class Year (Freshman, Sophomore, etc.)"></p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> Sign Up
         </button>
-      </form>
+        </form>
     </div>
   </body>
 </html>
