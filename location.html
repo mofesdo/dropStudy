@@ -95,45 +95,30 @@
           value="JOIN"
           onclick="myFunction()"
         />
-        
-        <!-- TEST BUTTON -->
-        
-        <input 
-               id="dlbtn"
-               type="button" 
-               class="w3-padding-large w3-section neoButton" 
-               value="Save" 
-               onclick="save();"/>
 
         <script>
-          var students = ["19513176514", "16692829957"];
+          var students = JSON.parse(localStorage.getItem('students'));
           
           function myFunction() {
 
-            for(var i = 0; i < students.length; i++) {
+            if(students.length > 0) {
+              for(var i = 0; i < students.length; i++) {
 
-              let request = new XMLHttpRequest()
-              request.onreadystatechange = function() {
-                if (this.readyState === 4) {
-                  console.log(this.status)
-                  console.log(this.responseText)
+                let request = new XMLHttpRequest()
+                request.onreadystatechange = function() {
+                  if (this.readyState === 4) {
+                    console.log(this.status)
+                    console.log(this.responseText)
+                  }
                 }
+
+                request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/2a44c1ac-0ac2-46e8-85ae-14943ffe2641/events", true)
+                request.setRequestHeader("Content-Type", "application/json")
+
+                request.send(JSON.stringify({"amount": "2", "class": "ECON 200", "student": students[i]}))
               }
-            
-              request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/2a44c1ac-0ac2-46e8-85ae-14943ffe2641/events", true)
-              request.setRequestHeader("Content-Type", "application/json")
-              
-              request.send(JSON.stringify({"amount": "2", "class": "ECON 200", "student": students[i]}))
             }
           }
-          
-          function save() {
-            var dlbtn = document.getElementById("dlbtn");
-            var file = new Blob(['123321'], {type: 'application/json'});
-            dlbtn.href = URL.createObjectURL(file);
-            dlbtn.download = 'test.json';
-          }
-          
         </script>
       </p>
     </div>

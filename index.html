@@ -201,6 +201,13 @@
       <!-- END PAGE CONTENT -->
     </div>
       
-
+    <script>
+      var data = localStorage.getItem('students');
+      
+      if(data == null) {
+        localStorage.setItem('students', '["19513176514", "16692829957"]');
+      }
+    </script>
+    
   </body>
 </html>
