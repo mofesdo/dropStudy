@@ -40,8 +40,29 @@
         margin-left: 0;
       }
     }
+    
+    .dark {
+      background: #373332;
+      color: #fff;
+    }
+    
+    .neoButton {
+  	  background: #373332;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+	  	border-radius: 12px;
+	  	box-shadow: 6px 6px 16px 0 rgba(45,41,40, 0.71), -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+    
+    .neoButton:hover {
+      transition: 0.6s;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      box-shadow: inset 5px 5px 10px 0 rgba(35,31,30, 0.8), inset -6px -6px 26px 0 rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
   </style>
-  <body class="w3-black">
+  <body class="dark">
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
@@ -107,7 +128,7 @@
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
       <!-- Header/Home -->
-      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+      <header class="w3-container w3-padding-32 w3-center dark" id="home">
         <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Drop In</h1>
         <p></p>
         <img
@@ -126,26 +147,26 @@
         </h2>
         <hr style="width:350px" class="w3-opacity" />
         <p>
-          <input
-            class="w3-input w3-padding-16"
-            type="text"
-            placeholder="BASKIN ENGINEERING, MCHENRY, ETC"
-          />
+          <select class="w3-input w3-padding-16">
+            <option value="baskin">Baskin Engineering</option>
+            <option value="mchenry">Mchenry</option>
+            <option value="something">Whatever</option>
+          </select>
         </p>
         <h2 class="w3-text-light-grey">
           What class would you like to study for?
         </h2>
         <hr style="width:350px" class="w3-opacity" />
         <p>
-          <input
-            class="w3-input w3-padding-16"
-            type="text"
-            placeholder="CSE 101, ECON 100A, ETC"
-          />
+          <select class="w3-input w3-padding-16">
+            <option value="ECON100">ECON 100</option>
+            <option value="MATH12">MATH 12</option>
+            <option value="CS100">CS 100</option>
+          </select>
         </p>
 
         <a href="hub.html">
-          <button class="w3-button w3-light-grey w3-padding-large w3-section">
+          <button class="w3-padding-large w3-section neoButton">
             MAKE STUDY SESSION
             <i class="fa fa-paper-plane"></i>
           </button>
