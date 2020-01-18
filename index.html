@@ -1,27 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  
+  
+  
   <head>
-    <title>Hello!</title>
+       
+  <title>TIC-TAC-SNAP</title>
+    
+    <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">www.TicTacSnap.com</a> </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">FIAT SLUG MEMBERS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      
+    <header style="background-image:url('https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fsnapchat.png?1555194808608');">
+        <div class="header-content">
+              <div class="container">
+            <div class="header-content-inner">
+              
+             <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FTicTacSnap.png?1555194629590" width="100" height = "100" class="center">
+                
+             <h1>Tic Tac Snap</h1>
+              
+ 
+              
+              
+  <html lang="en">
+  <body>
+    <div id="my-login-button-target" />
+    <script>
+       window.snapKitInit = function () {
+        var loginButtonIconId = 'my-login-button-target';
+        // Mount Login Button
+        snap.loginkit.mountButton(loginButtonIconId, {
+          clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
+          redirectURI: 'https://www.tictacsnap.com/',
+          scopeList: [
+            'user.display_name',
+            'user.bitmoji.avatar',
+          ],
+          handleResponseCallback: function() {
+            snap.loginkit.fetchUserInfo()
+              .then(data => console.log('User info:', data));
+               location.href = "maingame.html";
+          },
+        });
+      };
+      // Load the SDK asynchronously
+      (function (d, s, id) {
+        var js, sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/login.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      }(document, 'script', 'loginkit-sdk'));
+    </script>
+  </body>
+</html>
+                
+                      </script>
+                    </body>
+                  </html>
+             
+            </div>
+        </div>
+      </div>
+    </header>
+    <section class="about-section bg-color" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                    <h3>About</h3>
+                    <p>A simple Tic Tac Toe game but with a twist, the X's and O's are the players' bitmoji supplied through Snapchat login API.</p>
+                    <p>Made in 2019 for HACKSC.</p> <a href="https://devpost.com/software/placeholder-2b14zl" class="btn btn-default-new">TicTacSnap Devpost</a> </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-section" id="services">
+        <div class="container">
+             <h3>Team Members</h3>
+            
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-items">
+                      <a href="https://devpost.com/mreniva">
+                        <div class="icon">
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiCloid.png?1555198287831" alt="..." class="img-fluid">
+                        </div>
+                      </a>
+                        <h4><a href="https://devpost.com/mreniva">Miguelcloid Reniva</a></h4>
+                        <p>Front End Web Developer</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-items">
+                        <a href="https://devpost.com/JosueUriarte">
+                        <div class="icon">
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiJosue.png?1555198743989" alt="..." class="img-fluid">
+                        </div>
+                        <h4><a href="https://devpost.com/JosueUriarte">Josue Uriarte</a></h4>
+                        <p>Web Developer & Game Developer</p>
+                      </a>
+                  </div>
+                  
+                </div>
+                
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-items">
+                      <a href="https://devpost.com/KVILLA">
+                        <div class="icon">                          
+                        <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fyour_profile_picture%20(1).jpg?1555220928512" width="200 "height ="220 alt="..." class="center2">
+                        </div>
+                    
+                       <h4><a href="https://devpost.com/KVILLA">Kevin Villanueva</a></h4>
+                        <p>SnapChat Integration</p>
+                      </a>
+                  </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-items">
+                    <a href="https://devpost.com/mofesdo?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">
+                        <div class="icon">
+                          
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiMofesdo.png?1555197957968" "alt="..." class="img-fluid">
+
+                          
+                        </div>
+                        <h4><a href="https://devpost.com/mofesdo?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Modesto Amador</a></h4>
+                        <p>Game Developer & Graphic Designer </p>
+                      </a>
+                  </div>
+                </div>
+                
+                
+            </div>
+        </div>
+      </section>
+    </body>     
+</head>        
+            
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="cloid.css">
     
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
-
-    <!-- include the Glitch button to show what the webpage is about and
+  </head> <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
     <script src="https://button.glitch.me/button.js"></script>
-  </body>
-</html>
+  
