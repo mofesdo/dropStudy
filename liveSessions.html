@@ -128,13 +128,7 @@
         </h2>
         <hr style="width:350px" class="w3-opacity" />
         <p>
-          <input
-            class="w3-input w3-padding-16"
-            type="text"
-            placeholder="BASKIN ENGINEERING, MCHENRY, ETC"
-          />
-        </p>
-        <a href="mchenry.html">
+          <a href="mchenry.html">
           <button
             class="btn btn-lg btn-primary btn-block"
             type="submit"
@@ -142,23 +136,54 @@
           >
             Mchenry Library
           </button>
-
-        <script type ="text/javascript">
-          
-function myFunction(){
- 
-  alert("hello world");
-}
-        </script>
-        
-        <a href="hub.html">
-          <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="myFunction()">
-            JOIN
-            <i class="fa fa-paper-plane"></i>
-          </button>
-
-        
         </a>
+        </p>
+        
+        
+        <p>
+          <input
+            type="button"
+            value="                             click me"
+            onclick="myFunction()"
+          />
+    <script>
+
+
+</script>
+          <a href="hub.html">
+            <button
+              class="w3-button w3-light-grey w3-padding-large w3-section"
+              onclick="myFunction()">
+              JOIN
+              <i class="fa fa-paper-plane"></i>
+            </button>
+            <script>
+          function myFunction() {
+            let request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+              if (this.readyState === 4) {
+                console.log(this.status);
+                console.log(this.responseText);
+              }
+            };
+            request.open(
+              "POST",
+              "https://events-api.notivize.com/applications/a8b922d9-7671-4fdf-8b12-b6b5f7547070/event_flows/12d6743e-51cd-404e-a748-6aaa7267dd3a/events",
+              true
+            );
+            request.setRequestHeader("Content-Type", "application/json");
+            request.send(
+              JSON.stringify({
+                class: "Econ",
+                class_amount: "3",
+                student: "19513176514"
+              })
+            );
+          }
+        </script>
+            
+          </a>
+        </p>
         <!-- End Portfolio Section -->
       </div>
       <!-- Footer -->
