@@ -63,21 +63,18 @@
           CSE 101
         </button>
       </a>
-  
 
       <a href="hub.html">
         <button class="w3-input w3-padding-16" type="text" style="color:black">
           ECON 100A
         </button>
       </a>
-     
 
       <a href="hub.html">
         <button class="w3-input w3-padding-16" type="text" style="color:black">
           CMPM 178
         </button>
       </a>
-    
 
       <a href="hub.html">
         <button class="w3-input w3-padding-16" type="text" style="color:black">
@@ -93,21 +90,31 @@
         />
 
         <script>
-                      function myFunction() {
-let request = new XMLHttpRequest()
-request.onreadystatechange = function() {
-  if (this.readyState === 4) {
-    console.log(this.status)
-    console.log(this.responseText)
-  }
-}
-request.open("POST", "https://events-api.notivize.com/applications/7f59819e-295a-4289-a0d2-1aa97421b011/event_flows/c7a59f7c-24be-4fc4-8001-f173b415aa78/events", true)
-request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"class": "ECON 100A", "class_amount": "2", "student": "19513176514"}))
-
-                      }
+          function myFunction() {
+            let request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+              if (this.readyState === 4) {
+                console.log(this.status);
+                console.log(this.responseText);
+              }
+            };
+            request.open(
+              "POST",
+              "https://events-api.notivize.com/applications/7f59819e-295a-4289-a0d2-1aa97421b011/event_flows/c7a59f7c-24be-4fc4-8001-f173b415aa78/events",
+              true
+            );
+            request.setRequestHeader("Content-Type", "application/json");
+            request.send(
+              JSON.stringify({
+                class: "ECON 100A",
+                class_amount: "2",
+                student: "19513176514"
+              })
+            );
+          }
         </script>
       </p>
     </div>
   </body>
 </html>
+>
