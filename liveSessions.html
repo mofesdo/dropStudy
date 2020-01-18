@@ -46,6 +46,23 @@
       color: #fff;
     }
     
+    
+    .neoButton {
+  	  background: #373332;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+	  	border-radius: 12px;
+	  	box-shadow: 6px 6px 16px 0 rgba(45,41,40, 0.71), -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+    
+    .neoButton:hover {
+      transition: 0.6s;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      box-shadow: inset 5px 5px 10px 0 rgba(35,31,30, 0.8), inset -6px -6px 26px 0 rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+    
   </style>
   <body class="dark">
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -134,7 +151,19 @@
         </h2>
         <hr style="width:350px" class="w3-opacity" />
         
+        <select class="w3-input w3-padding-16">
+          <option>Mchenry Library</option>
+          <option>Baskin Engineering Library</option>
+          <option>Kresge Study Lounge</option>
+          <option>Porter Study Lounge</option>
+          <option>Stevenson Fireside Lounge</option>
+          <option>Oakes Cafe</option>
+        </select>
+        
         <a href="location.html">
+          <button class="w3-padding-large w3-section neoButton">
+            Continue
+          </button>
         </a>
         
         <!-- End Portfolio Section -->
