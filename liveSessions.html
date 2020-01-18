@@ -49,11 +49,17 @@
         src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579332790258"
         style="width:100%"
       />
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-        <i class="fa fa-home w3-xxlarge"></i>
+      <a
+        href="hub.html"
+        class="w3-bar-item w3-button w3-padding-large w3-black"
+      >
+        <img
+          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-HUB.png?v=1579356935064"
+          style="width:100%"
+        />
         <p>HOME</p>
       </a>
-       <a
+      <a
         href="liveSessions.html"
         class="w3-bar-item w3-button w3-padding-large w3-hover-black"
       >
@@ -102,7 +108,9 @@
     <div class="w3-padding-large" id="main">
       <!-- Header/Home -->
       <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Live Study Sessions</h1>
+        <h1 class="w3-jumbo">
+          <span class="w3-hide-small"></span> Live Study Sessions
+        </h1>
         <p></p>
         <img
           src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Study-Sessions.png?v=1579355164208"
@@ -116,7 +124,7 @@
       <!-- About Section -->
       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
         <h2 class="w3-text-light-grey">
-          Where are you located?
+          STUDY LOCATIONS
         </h2>
         <hr style="width:350px" class="w3-opacity" />
         <p>
@@ -126,26 +134,30 @@
             placeholder="BASKIN ENGINEERING, MCHENRY, ETC"
           />
         </p>
-        <h2 class="w3-text-light-grey">
-          What class would you like to study for?
-        </h2>
-        <hr style="width:350px" class="w3-opacity" />
-        <p>
-          <input
-            class="w3-input w3-padding-16"
-            type="text"
-            placeholder="CSE 101, ECON 100A, ETC"
-          />
-        </p>
+        <a href="mchenry.html">
+          <button
+            class="btn btn-lg btn-primary btn-block"
+            type="submit"
+            style="color:white"
+          >
+            Mchenry Library
+          </button>
 
+        <script type ="text/javascript">
+          
+function myFunction(){
+ 
+  alert("hello world");
+}
+        </script>
+        
         <a href="hub.html">
-          <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick>
+          <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="myFunction()">
             JOIN
             <i class="fa fa-paper-plane"></i>
           </button>
-          
-          <input type="button" value="                             click me" onclick="myFunction()" />
-          
+
+        
         </a>
         <!-- End Portfolio Section -->
       </div>
@@ -153,8 +165,5 @@
 
       <!-- END PAGE CONTENT -->
     </div>
-    
   </body>
 </html>
-
-
