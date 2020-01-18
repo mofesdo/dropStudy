@@ -5,6 +5,6 @@ request.onreadystatechange = function() {
     console.log(this.responseText)
   }
 }
-request.open("POST", "https://events-api.notivize.com/applications/5bf6be6b-68f2-4b9b-aa10-09725743fbe3/event_flows/fac86153-83a2-4292-ac18-7b252a223ef7/events", true)
+request.open("POST", "https://events-api.notivize.com/applications/5bf6be6b-68f2-4b9b-aa10-09725743fbe3/event_flows/e54a1e20-9338-4034-839a-75f09c456288/events", true)
 request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"create": "<value for create>", "lifecycle_stage": "<value for lifecycle_stage>", "student": "<value for student>", "studier": "<value for studier>"}))
+request.send(JSON.stringify({"class": "<2>", "student": "<9513176514>"}))
