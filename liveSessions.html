@@ -122,24 +122,41 @@
       </header>
 
       <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <div class="container">
         <h2 class="w3-text-light-grey">
           STUDY LOCATIONS
         </h2>
         <hr style="width:350px" class="w3-opacity" />
         <p>
-          <a href="mchenry.html">
-          <button
-            class="btn btn-lg btn-primary btn-block"
-            type="submit"
-            style="color:white"
-          >
-            Mchenry Library
-          </button>
-        </a>
+          <a href="location.html">
+            <button
+              class="btn btn-lg btn-primary btn-block"
+              type="submit"
+              style="color:blue"
+            >
+              Mchenry Library
+            </button>
+          </a>
+          <a href="location.html">
+            <button
+              class="btn btn-lg btn-primary btn-block"
+              type="submit"
+              style="color:blue"
+            >
+              Baskin Engineering Library
+            </button>
+          </a>
+                    <a href="location.html">
+            <button
+              class="btn btn-lg btn-primary btn-block"
+              type="submit"
+              style="color:blue"
+            >
+              Kresge Study Lounge
+            </button>
+          </a>
         </p>
-        
-        
+
         <p>
           <input
             type="button"
@@ -147,34 +164,31 @@
             value="JOIN"
             onclick="myFunction()"
           />
- 
-    
-            <script>
-          function myFunction() {
-            let request = new XMLHttpRequest();
-            request.onreadystatechange = function() {
-              if (this.readyState === 4) {
-                console.log(this.status);
-                console.log(this.responseText);
-              }
-            };
-            request.open(
-              "POST",
-              "https://events-api.notivize.com/applications/a8b922d9-7671-4fdf-8b12-b6b5f7547070/event_flows/12d6743e-51cd-404e-a748-6aaa7267dd3a/events",
-              true
-            );
-            request.setRequestHeader("Content-Type", "application/json");
-            request.send(
-              JSON.stringify({
-                class: "Econ",
-                class_amount: "3",
-                student: "19513176514"
-              })
-            );
-          }
-        </script>
-            
-        
+
+          <script>
+            function myFunction() {
+              let request = new XMLHttpRequest();
+              request.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                  console.log(this.status);
+                  console.log(this.responseText);
+                }
+              };
+              request.open(
+                "POST",
+                "https://events-api.notivize.com/applications/a8b922d9-7671-4fdf-8b12-b6b5f7547070/event_flows/12d6743e-51cd-404e-a748-6aaa7267dd3a/events",
+                true
+              );
+              request.setRequestHeader("Content-Type", "application/json");
+              request.send(
+                JSON.stringify({
+                  class: "Econ",
+                  class_amount: "3",
+                  student: "19513176514"
+                })
+              );
+            }
+          </script>
         </p>
         <!-- End Portfolio Section -->
       </div>
