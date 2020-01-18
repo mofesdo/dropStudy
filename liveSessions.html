@@ -168,7 +168,7 @@
             <button
               class="btn btn-lg btn-primary btn-block"
               type="submit"
-              style="color:blue; "
+              style="color:blue;"
             >
               Stevenson Fireside Lounge
             </button>
@@ -177,38 +177,13 @@
             <button
               class="btn btn-lg btn-primary btn-block"
               type="submit"
-              style="color:blue"
+              style="color:blue; cursor:pointer;"
             >
               Oakes Cafe
             </button>
           </a>
         </p>
 
-        <p>
-          <input
-            type="button"
-            class="w3-button w3-light-grey w3-padding-large w3-section"
-            value="JOIN"
-            onclick="myFunction()"
-          />
-
-          <script>
-            function myFunction() {
-  let request = new XMLHttpRequest()
-request.onreadystatechange = function() {
-  if (this.readyState === 4) {
-    console.log(this.status)
-    console.log(this.responseText)
-  }
-}
-request.open("POST", "https://events-api.notivize.com/applications/a8b922d9-7671-4fdf-8b12-b6b5f7547070/event_flows/9262e36c-9e80-420f-8ea2-ddc4b2dcfd7d/events", true)
-request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"class": "ECON 100A", "class_amount": "3", "student": "19513176514"}))
-                }
-              );
-            }
-          </script>
-        </p>
         <!-- End Portfolio Section -->
       </div>
       <!-- Footer -->
