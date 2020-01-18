@@ -90,19 +90,24 @@
         />
 
         <script>
+          var students = ["19513176514", "16692829957"];
+          
           function myFunction() {
-    let request = new XMLHttpRequest()
-request.onreadystatechange = function() {
-  if (this.readyState === 4) {
-    console.log(this.status)
-    console.log(this.responseText)
-  }
-}
-request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/8215c5e5-b11c-4706-8419-5fbe675c0cf0/events", true)
-request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"amount": "3", "class": "econ 100A", "kid": "19513176514", "student": "13234126648"}))
+            let request = new XMLHttpRequest()
+            request.onreadystatechange = function() {
+              if (this.readyState === 4) {
+                console.log(this.status)
+                console.log(this.responseText)
+              }
+            }
+            
+            request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/8215c5e5-b11c-4706-8419-5fbe675c0cf0/events", true)
+            request.setRequestHeader("Content-Type", "application/json")
+            //request.send(JSON.stringify({"amount": "<value for amount>", "class": "ECON 100A", "class_amount": "3", "kid": "<value for kid>", "student": "19513176514"}))
 
-
+            for(var i = 0; i < students.length; i++) {
+              request.send(JSON.stringify({"amount": "<value for amount>", "class": "ECON 100A", "class_amount": "3", "kid": "<value for kid>", "student": students[i]}))
+            }
           }
           
         </script>
