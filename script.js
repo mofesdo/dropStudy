@@ -5,6 +5,6 @@ request.onreadystatechange = function() {
     console.log(this.responseText)
   }
 }
-request.open("POST", "https://events-api.notivize.com/applications/5bf6be6b-68f2-4b9b-aa10-09725743fbe3/event_flows/e54a1e20-9338-4034-839a-75f09c456288/events", true)
+request.open("POST", "https://events-api.notivize.com/applications/a8b922d9-7671-4fdf-8b12-b6b5f7547070/event_flows/12d6743e-51cd-404e-a748-6aaa7267dd3a/events", true)
 request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"class": "<2>", "student": "<9513176514>"}))
+request.send(JSON.stringify({"class": "ECON 101", "class_amount": "3", "student": "19513176514"}))
