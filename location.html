@@ -91,18 +91,19 @@
 
         <script>
           function myFunction() {
-           let request = new XMLHttpRequest()
+     let request = new XMLHttpRequest()
 request.onreadystatechange = function() {
   if (this.readyState === 4) {
     console.log(this.status)
     console.log(this.responseText)
   }
 }
-request.open("POST", "https://events-api.notivize.com/applications/7f59819e-295a-4289-a0d2-1aa97421b011/event_flows/30cfb7ef-17ac-4331-949b-1941dcf87452/events", true)
+request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/43382342-8b00-4155-b9b8-03d47e9b5344/events", true)
 request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"class": "Econ 100A", "class_amount": "3", "student": "19513176514", "student2": "13234126648"}))
+request.send(JSON.stringify({"amount": "2", "class": "dcdcd", "kid": "<value", "student": "<value for student>", "student, kid": "<value for student, kid>"}))
 
           }
+          
         </script>
       </p>
     </div>
