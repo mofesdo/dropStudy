@@ -95,6 +95,15 @@
           value="JOIN"
           onclick="myFunction()"
         />
+        
+        <!-- TEST BUTTON -->
+        
+        <input 
+               id="dlbtn"
+               type="button" 
+               class="w3-padding-large w3-section neoButton" 
+               value="Save" 
+               onclick="save();"/>
 
         <script>
           var students = ["19513176514", "16692829957"];
@@ -116,6 +125,13 @@
               
               request.send(JSON.stringify({"amount": "2", "class": "ECON 200", "student": students[i]}))
             }
+          }
+          
+          function save() {
+            var dlbtn = document.getElementById("dlbtn");
+            var file = new Blob(['123321'], {type: 'application/json'});
+            dlbtn.href = URL.createObjectURL(file);
+            dlbtn.download = 'test.json';
           }
           
         </script>
