@@ -14,6 +14,7 @@
   />
   <style>
     body,
+    p,
     h1,
     h2,
     h3,
@@ -21,6 +22,7 @@
     h5,
     h6 {
       font-family: "Montserrat", sans-serif;
+      color: #fff;
     }
     .w3-row-padding img {
       margin-bottom: 12px;
@@ -43,9 +45,24 @@
     
     .dark {
       background: #373332;
+      color: #fff;
+    }
+    
+    .neoButton {
+  	  background: #373332;
+      border: 1px solid rgba(0, 0, 0, 0.20);
+	  	border-radius: 12px;
+	  	box-shadow: 6px 6px 16px 0 rgba(45,41,40, 0.71), -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+    
+    .neoButton:hover {
+		border: 1px solid rgba(0, 0, 0, 0.20);
+		border-radius: 12px;
+		box-shadow: inset 6px 6px 16px 0 rgba(45,41,40, 0.71), inset -6px -6px 26px 0 rgba(0, 0, 0, 0.43);
     }
   </style>
-  <body class="w3-black">
+  <body class="dark">
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
@@ -133,7 +150,7 @@
         <p>SIGN UP:</p>
 
         <a href="signup.html">
-          <button class="w3-button w3-light-grey w3-padding-large w3-section">
+          <button class="w3-padding-large w3-section neoButton">
             <i class=""></i> SIGN UP
           </button>
         </a>
