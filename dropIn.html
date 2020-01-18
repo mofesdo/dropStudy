@@ -148,9 +148,11 @@
         <hr style="width:350px" class="w3-opacity" />
         <p>
           <select class="w3-input w3-padding-16">
-            <option value="baskin">Baskin Engineering</option>
-            <option value="mchenry">Mchenry</option>
-            <option value="something">Whatever</option>
+            <option value="baskin">Baskin Engineering Libary</option>
+            <option value="mchenry">Mchenry Library</option>
+            <option value="kresgeLounge">Kresge Lounge</option>
+            <option value="porterLounge">Porter Lounge</option>
+            <option value="firesideLounge">Fireside Lounge</option>
           </select>
         </p>
         <h2 class="w3-text-light-grey">
@@ -161,15 +163,20 @@
           <select class="w3-input w3-padding-16">
             <option value="ECON100">ECON 100</option>
             <option value="MATH12">MATH 12</option>
-            <option value="CS100">CS 100</option>
+            <option value="CSE101">CSE 101</option>
           </select>
         </p>
 
         <a href="hub.html">
-          <button class="w3-padding-large w3-section neoButton">
+          <button class="w3-padding-large w3-section neoButton; onclick:myFucntion()">
             MAKE STUDY SESSION
             <i class="fa fa-paper-plane"></i>
           </button>
+          <script>
+            function myFunction(){
+            alert('Session successfully created. You will be notified when someone joins');
+            }
+          </script>
         </a>
         <!-- End Portfolio Section -->
       </div>
