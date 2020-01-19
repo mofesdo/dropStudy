@@ -24,58 +24,83 @@
       font-family: "Montserrat", sans-serif;
       color: #fff;
     }
+
     .w3-row-padding img {
       margin-bottom: 12px;
     }
+
     /* Set the width of the sidebar to 120px */
+
     .w3-sidebar {
       width: 120px;
       background: #222;
     }
+
     /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+
     #main {
       margin-left: 120px;
     }
+
     /* Remove margins from "page content" on small screens */
+
     @media only screen and (max-width: 600px) {
       #main {
         margin-left: 0;
       }
     }
-    
+
     .dark {
       background: #373332;
       color: #fff;
+      border-radius: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 6px 6px 16px 0 rgba(45, 41, 40, 0.71),
+        -6px -6px 26px 0 rgba(0, 0, 0, 0.43);
     }
-    
+
     .neoButton {
-  	  background: #373332;
-      border: 1px solid rgba(0, 0, 0, 0.25);
-	  	border-radius: 12px;
-	  	box-shadow: 6px 6px 16px 0 rgba(45,41,40, 0.71), -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
-      color: #fff;
-    }
-    
-    .neoButton:hover {
-      transition: 0.6s;
+      transition: 0.5s;
+      background: rgba(52, 152, 219, 1);
       border: 1px solid rgba(0, 0, 0, 0.25);
       border-radius: 12px;
-      box-shadow: inset 5px 5px 10px 0 rgba(35,31,30, 0.8), inset -6px -6px 26px 0 rgba(0, 0, 0, 0.3);
       color: #fff;
     }
-}
 
+    .neoButton:hover {
+      transition: 0.5s;
+      background: #2980b9;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      color: #fff;
+    }
 
+    .padding {
+      padding: 15px;
+    }
 
+    .bold {
+      font-weight: bold;
+    }
 
+    .s-bold {
+      font-weight: 900;
+    }
+
+    .outline {
+      -webkit-text-stroke-width: 0.1px;
+      color: white;
+      text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
     }
   </style>
-  <body class="dark">
+
+  <body
+    style="background: url(https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2F71syu%2B-31SL._SL1100_.jpg?v=1579381939756);" >
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
       <img
-        src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579332790258"
+        src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579386290269"
         style="width:100%"
       />
       <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
@@ -89,7 +114,6 @@
         <i class="fa fa-user w3-xxlarge"></i>
         <p>ABOUT</p>
       </a>
-
       <a
         href="#contact"
         class="w3-bar-item w3-button w3-padding-large w3-hover-black"
@@ -98,7 +122,6 @@
         <p>CONTACT</p>
       </a>
     </nav>
-
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
       <div
@@ -121,61 +144,65 @@
         >
       </div>
     </div>
-
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
       <!-- Header/Home -->
       <header class="w3-container w3-padding-32 w3-center" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> DropStudy</h1>
-        <p>Drop In, Study Together, Pass the Class.</p>
+        <h1 class="w3-jumbo">
+          <span class="w3-hide-small"></span>
+          <u class="outline s-bold">Drop In, Study Together, Pass the Class.</u>
+        </h1>
         <img
-          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579332790258"
+          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579386290269"
           alt="logo"
           class="w3-image"
           width="992"
           height="1108"
         />
       </header>
-
       <!-- About Section -->
       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-        <h2 class="w3-text-light-grey">
-          ABOUT DROPSTUDY
-          <img
-            src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FFeather.png?1579343131047"
-            height="30"
-          />
-        </h2>
-
-        <hr style="width:350px" class="w3-opacity" />
-        <p>
-          DropStudy is a new web application curated for students that don't want
-          to study alone. DropStudy will take inputs of your classes and using
-          Notivize, notifications will alert you of other students that are
-          studying for the same classes as you, all in real-time.
-        </p>
-
-        <h3 class="w3-padding-16 w3-text-light-grey">GET STARTED:</h3>
-
-        <a href="signup.html">
-          <button class="w3-padding-large w3-section neoButton">
-            <i class=""></i> SIGN UP
-          </button>
-        </a>
-        <h3 class="w3-padding-16 w3-text-light-grey">ALREADY A MEMBER?</h3>
-        <a href="login.html">
-          <button class="w3-padding-large w3-section neoButton">
-            <i class=""></i> LOGIN
-          </button>
-        </a>
+        <div class="dark padding">
+          <h2 class="outline">
+            ABOUT DROPSTUDY
+            <img src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FFeather.png?1579343131047" height="30" />
+          </h2>
+          <hr style="width:350px" class="w3-opacity" />
+          <p>
+            DropStudy is a new web application curated for students that don't
+            want to study alone. DropStudy will take inputs of your classes and
+            using Notivize, notifications will alert you of other students that
+            are studying for the same classes as you, all in real-time.
+          </p>
+          <h3 class="w3-padding-16 w3-text-light-grey">GET STARTED</h3>
+          <a href="signup.html">
+            <button class="w3-padding-large w3-section neoButton">
+              <i class=""></i> SIGN UP
+            </button>
+          </a>
+        </div>
+        <br>
+        <div class="dark padding">
+          <p>
+          <h3 class="w3-padding-16 w3-text-light-grey dark padding">
+            ALREADY A MEMBER?
+          </h3>
+          <a href="login.html">
+            <button class="w3-padding-large w3-section neoButton">
+              <i class=""></i> LOGIN
+            </button>
+          </a>
+          </p>
+        </div>
         <!-- End Portfolio Section -->
       </div>
-
       <!-- Contact Section -->
-      <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <div
+        class="w3-padding-64 w3-content w3-text-grey dark padding"
+        id="contact"
+      >
         <h2 class="w3-text-light-grey">Contact Us</h2>
         <hr style="width:200px" class="w3-opacity" />
-
         <div class="w3-section">
           <p>
             <i
@@ -186,28 +213,21 @@
           <p>
             <i
               class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"
-            >
-            </i>
+            ></i>
             Email: officialdropstudy@gmail.com
           </p>
         </div>
         <br />
-
         <!-- End Contact Section -->
       </div>
-
       <!-- Footer -->
-
       <!-- END PAGE CONTENT -->
     </div>
-      
     <script>
-      var data = localStorage.getItem('students');
-      
-      if(data == null) {
-        localStorage.setItem('students', '["19513176514", "16692829957"]');
+      var data = localStorage.getItem("students");
+      if (data == null) {
+        localStorage.setItem("students", '["19513176514", "16692829957"]');
       }
     </script>
-    
   </body>
 </html>

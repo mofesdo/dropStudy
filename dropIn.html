@@ -45,6 +45,11 @@
       background: #373332;
       color: #fff;
     }
+        .outline {
+      -webkit-text-stroke-width: 0.1px;
+      color: white;
+      text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
+    }
     
     .neoButton {
   	  background: #373332;
@@ -62,12 +67,13 @@
       color: #fff;
     }
   </style>
-  <body class="dark">
+  <body style = "background: url(https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2F003-mountain-forest-foggy-wallpaper-1920x1280p-free-download.jpg?v=1579388648985); 
+                 background-size: 100%, 100%;">
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
       <img
-        src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579332790258"
+        src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579386290269"
         style="width:100%"
       />
       <a
@@ -88,17 +94,17 @@
           src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Study-Sessions.png?v=1579355164208"
           style="width:100%"
         />
-        <p>Live Sessions</p>
+        <p style="color:white"> Live Sessions</p>
       </a>
       <a
         href="dropIn.html"
         class="w3-bar-item w3-button w3-padding-large w3-hover-black"
       >
         <img
-          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Drop-in.png?v=1579353392723"
+          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Drop-in.png?v=15793896186333"
           style="width:100%"
         />
-        <p>DROP IN</p>
+        <p style="color:white"> DROP IN</p>
       </a>
     </nav>
 
@@ -128,11 +134,11 @@
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
       <!-- Header/Home -->
-      <header class="w3-container w3-padding-32 w3-center dark" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Drop In</h1>
+      <header class="w3-container w3-padding-32 w3-center" id="home">
+        <h1 class="w3-jumbo"><u class="outline s-bold">Drop In</u></h1>
         <p></p>
         <img
-          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Drop-in.png?v=1579353392723"
+          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Drop-in.png?v=1579389618633"
           alt="drop in logo"
           class="w3-image"
           width="992"
@@ -143,6 +149,7 @@
       <!-- About Section -->
       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
         <h2 class="w3-text-light-grey">
+           
           Where are you located?
         </h2>
         <hr style="width:350px" class="w3-opacity" />
@@ -153,6 +160,7 @@
             <option value="kresgeLounge">Kresge Lounge</option>
             <option value="porterLounge">Porter Lounge</option>
             <option value="firesideLounge">Fireside Lounge</option>
+            <option value="oakesCafe">Oakes Cafe</option>
           </select>
         </p>
         <h2 class="w3-text-light-grey">
