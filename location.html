@@ -39,30 +39,34 @@
         margin-left: 0;
       }
     }
-    
-    
+
     .dark {
       background: #373332;
       color: #fff;
     }
-    
+
     .neoButton {
-  	  background: #373332;
+      background: #373332;
       border: 1px solid rgba(0, 0, 0, 0.25);
-	  	border-radius: 12px;
-	  	box-shadow: 6px 6px 16px 0 rgba(45,41,40, 0.71), -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      box-shadow: 6px 6px 16px 0 rgba(45, 41, 40, 0.71),
+        -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
       color: #fff;
     }
-    
+
     .neoButton:hover {
       transition: 0.6s;
       border: 1px solid rgba(0, 0, 0, 0.25);
       border-radius: 12px;
-      box-shadow: inset 5px 5px 10px 0 rgba(35,31,30, 0.8), inset -6px -6px 26px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: inset 5px 5px 10px 0 rgba(35, 31, 30, 0.8),
+        inset -6px -6px 26px 0 rgba(0, 0, 0, 0.3);
       color: #fff;
     }
   </style>
-  <body class="dark">
+  <body
+    style="background: url(https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2F1ded44f66234c36e01a5ce1613b94e98.jpg?v=1579390466292);
+                 background-size: 100%,100%;"
+  >
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       rel="stylesheet"
@@ -80,48 +84,69 @@
       <h2 class="form-signin-heading">
         These are the classes people are studying for at this location
       </h2>
-              <p>
-          <select class="w3-input w3-padding-16">
-            <option value="CSE101">CSE 101</option>
-            <option value="ECON100A">ECON 100A</option>
-            <option value="PHYS1">PHYS 1</option>
-            <option value="CMPM178">CMPM 178</option>
-          </select>
-        </p>
+      <p>
+        <select class="w3-input w3-padding-16">
+          <option value="CSE101">CSE 101</option>
+          <option value="ECON100A">ECON 100A</option>
+          <option value="PHYS1">PHYS 1</option>
+          <option value="CMPM178">CMPM 178</option>
+        </select>
+      </p>
       <p>
         <input
           type="button"
           class="w3-padding-large w3-section neoButton"
           value="JOIN"
-          onclick="myFunction()"
+          onclick="myFunction();"
         />
-
+      
         <script>
-          var students = JSON.parse(localStorage.getItem('students'));
-          
+          var students = ["19513176514", "16692829957"];
+
+          console.log(students);
+
           function myFunction() {
+            let request = new XMLHttpRequest()
+request.onreadystatechange = function() {
+  if (this.readyState === 4) {
+    console.log(this.status)
+    console.log(this.responseText)
+  }
+}
+request.open("POST", "https://events-api.notivize.com/applications/aa6d7535-0cda-46d6-980a-b9861a0f52de/event_flows/52072558-2c92-4e3c-b2b5-88ee3f359dc8/events", true)
+request.setRequestHeader("Content-Type", "application/json")
+request.send(JSON.stringify({"amount": "3", "class": "Econ", "student": "13234126648"}))
 
-            if(students.length > 0) {
-              for(var i = 0; i < students.length; i++) {
-
-                let request = new XMLHttpRequest()
-                request.onreadystatechange = function() {
-                  if (this.readyState === 4) {
-                    console.log(this.status)
-                    console.log(this.responseText)
-                  }
-                }
-
-                request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/2a44c1ac-0ac2-46e8-85ae-14943ffe2641/events", true)
-                request.setRequestHeader("Content-Type", "application/json")
-
-                request.send(JSON.stringify({"amount": "2", "class": "ECON 200", "student": students[i]}))
-              }
-            }
-          }
+            
+        /*    for(var i = 0; i < students.length; i++) {
+              let request = new XMLHttpRequest()
+request.onreadystatechange = function() {
+  if (this.readyState === 4) {
+    console.log(this.status)
+    console.log(this.responseText)
+  }
+}
+request.open("POST", "https://events-api.notivize.com/applications/b5a94caa-d2fc-408e-88a6-4a5310d4c8e6/event_flows/ccb74e71-297d-495c-b0ec-a38c59ec8d7e/events", true)
+request.setRequestHeader("Content-Type", "application/json")
+request.send(JSON.stringify({"amount": "2", "class": "value123", "course": "coursse0", "student": students[i]}))
+            
+            
+            
+              <a href="liveSessions.html">
+          <input
+            type="button"
+            class="w3-padding-large w3-section neoButton"
+            value="GO BACK"
+          />
+        </a> 
+            
+            
+            
+            
+            } */
+          } 
         </script>
       </p>
     </div>
   </body>
 </html>
-
